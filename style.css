@@ -10,6 +10,19 @@ html,
 body {
   height: 100%;
   width: 100%;
+  /* cursor: none; */
+}
+
+#cursor {
+  height: 2.7vw;
+  width: 2.7vw;
+  border-radius: 50%;
+  /* background-color: white; */
+  border: 2px solid rgb(158, 158, 158);
+  position: fixed;
+  z-index: 99;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
 }
 
 #loader {
@@ -95,7 +108,6 @@ body {
     opacity: 0;
   }
 }
-
 #main {
   position: relative;
   background-color: #111;
@@ -104,5 +116,58 @@ body {
 #page1 {
   height: 100vh;
   width: 100%;
-  background-color: #202020;
+  background-color: #151515;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 4vw;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.banner {
+  /* background-color: red; */
+  width: 72%;
+  margin-left: 28%;
+  height: fit-content;
+  /* background-color: red; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+}
+
+.banner:nth-child(2) {
+  margin-top: 18vh;
+}
+.banner h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 7vw;
+  line-height: 7vw;
+}
+
+.banner h2,
+.banner h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 7vw;
+  line-height: 7vw;
+}
+
+.banner h2:hover {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-weight: 500;
 }
