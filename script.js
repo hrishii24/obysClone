@@ -42,6 +42,11 @@ function loadingAnimation() {
     ease: Power4,
   });
 
+  tl.to("#disclaimer", {
+    opacity: 0,
+    duration: 0.2,
+  });
+
   tl.to("#loader", {
     // display: none,
   });
@@ -63,12 +68,18 @@ document.addEventListener("mousemove", function (dets) {
   gsap.to("#cursor", {
     left: dets.x,
     top: dets.y,
-    // stagger: 0,
+    duration: 0.3,
   });
 });
 
-function cursorAnimation() {
-  Shery.makeMagnet("#nav-part2 h4");
-}
-
-cursorAnimation();
+let link = document.querySelectorAll(".link").forEach((link) => {
+  link.addEventListener("mousemove", (e) => {
+    let x = e.offsetX;
+    let y = e.offsetY;
+    let linkWidth = link.clientWidth;
+    let linkHeight = link.clientHeight;
+    let transX = x - linkWidth / 2;
+    let transY = y - linkHeight / 2;
+    link.style.transform = `translateX(${transX}px)translateY(${transY}px)`;
+  });
+});
