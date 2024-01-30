@@ -129,7 +129,7 @@ body {
 #page1 {
   height: 100vh;
   width: 100%;
-  background-color: #151515;
+  /* background-color: #151515; */
 }
 
 #nav {
@@ -154,11 +154,10 @@ body {
   margin-left: 28%;
   height: fit-content;
   /* background-color: red; */
-  overflow: hidden;
+  overflow-y: hidden;
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 999;
+  /* overflow-x: auto; */
 }
 
 .banner:nth-child(2) {
@@ -169,8 +168,18 @@ body {
   font-weight: 600;
   font-size: 7vw;
   line-height: 7vw;
+  position: relative;
 }
 
+#banner1 h1::before {
+  content: "01";
+  position: absolute;
+  font-size: 3.5vw;
+  font-family: "silk serif";
+  left: -8vw;
+  top: -1vw;
+  font-weight: 500;
+}
 .banner h2 {
   text-transform: uppercase;
   font-weight: 600;
@@ -197,7 +206,7 @@ body {
 #page2 {
   height: 100vh;
   width: 100%;
-  background-color: #151515;
+  /* background-color: #151515; */
   padding-top: 18vh;
   position: relative;
 }
@@ -244,11 +253,147 @@ body {
 }
 
 #page3 {
-  background-color: #424242;
   min-height: 100vh;
   width: 100%;
+  /* background-color: rgb(61, 61, 61); */
+  position: relative;
+  padding: 17vh 2vw;
+  margin-bottom: 20vh;
+  margin-top: 20vh;
 }
 
+#page3 h1 {
+  font-size: 7vw;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 28vw;
+}
+
+#page3 h1::before {
+  content: "02";
+  position: absolute;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "silk serif";
+  left: -12%;
+  top: 8%;
+}
+
+#page3 .underline {
+  margin-left: 28vw;
+}
+
+#image-div-container {
+  /* background-color: violet; */
+  padding: 1vw;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2vw;
+  padding: 0 3vw;
+  margin-top: 14vw;
+}
+
+.image-div {
+  /* background-color: #3f7df4; */
+  position: relative;
+  overflow: hidden;
+  height: 30vw;
+  width: 22vw;
+  flex-shrink: 0;
+}
+
+.image-div:nth-child(2) {
+  height: 35vw;
+  width: 28vw;
+}
+
+.image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page3-circle1 {
+  height: 23vw;
+  width: 23vw;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-top: 23vh;
+  margin-left: 10vw;
+  justify-content: center;
+  position: relative;
+}
+
+.page3-circle1 svg {
+  width: 30%;
+}
+
+.page3-circle2 {
+  height: 23vw;
+  width: 23vw;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* margin-top: 20vh; */
+  justify-content: center;
+}
+
+.page3-circle2 svg {
+  width: 30%;
+  rotate: -45deg;
+}
+
+.circle-in {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  scale: 0;
+  border-radius: 50%;
+}
+
+.circle-in p {
+  font-size: 1vw;
+  color: #000;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 0;
+  transition: all ease 0.5s;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+
+.page3-circle1:hover .circle-in {
+  scale: 1;
+}
+.page3-circle1:hover p {
+  scale: 1;
+  opacity: 1;
+}
+
+.page3-circle2:hover .circle-in {
+  scale: 1;
+}
+.page3-circle2:hover p {
+  scale: 1;
+  opacity: 1;
+}
 #page4 {
   min-height: 100vh;
   width: 100%;
@@ -256,9 +401,9 @@ body {
 }
 
 #page4-content {
-  width: 70vw;
+  width: 72vw;
   position: relative;
-  margin-left: auto;
+  margin-left: 28%;
   /* background-color: #424242; */
 }
 
@@ -266,13 +411,28 @@ body {
   text-transform: uppercase;
   font-size: 7vw;
   font-weight: 600;
+  position: relative;
+}
+
+#page4-content::before {
+  content: "03";
+  position: absolute;
+  font-size: 3.5vw;
+  font-family: "silk serif";
+  left: -8vw;
+  font-weight: 500;
 }
 
 #page4-content .underline {
   height: 1px;
   width: 100%;
   background-color: #fff;
-  margin: 4vw 0;
+  margin: 4vw 0 2vw 0;
+}
+
+#page4-content span h4 {
+  font-size: 2.2vh;
+  font-weight: 500;
 }
 
 #page4-content > p {
@@ -325,4 +485,127 @@ body {
 #page5 {
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  /* background-color: #424242; */
+  padding: 5vw 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.elem h1 {
+  /* background-color: #3f7df4; */
+  font-size: 7vw;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding: 0;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation-name: marquee;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+.elem2 h1 {
+  /* background-color: #fd9824; */
+  line-height: 1.2;
+  font-size: 7vw;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  transform: translateX(calc(100% - 20px));
+  animation-name: marquee;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.elem span {
+  font-style: italic;
+  font-family: "silk serif";
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+
+.elem2 span {
+  font-style: italic;
+  font-family: "silk serif";
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+
+#footer {
+  height: 96vh;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: 5vw;
+}
+
+#footer-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6vw 3vw 0;
+}
+
+.box {
+  width: 25%;
+}
+
+#footer h1 {
+  font-size: 8vw;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+}
+
+#footer h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3.5vw;
+  font-family: "silk serif";
+  left: -8vw;
+  font-weight: 500;
+}
+
+.underline {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  margin: 2vw 0;
+}
+
+.box h5 {
+  font-size: 1.2vw;
+  font-weight: 500;
+  margin-bottom: 2vw;
+}
+
+.box h6 {
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+#copyright {
+  padding: 1vw 0;
+}
+
+._canvas_container {
+  z-index: 99 !important;
+  pointer-events: none;
 }
